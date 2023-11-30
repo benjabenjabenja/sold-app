@@ -1,1 +1,59 @@
-<p>register works!</p>
+<section class="flex justify-center items-center h-screen ">
+    <!-- REGISTER FORM -->
+    <form class="flex flex-col bg-white shadow-md rounded-lg p-8">
+        <!-- INPUT USERNAME -->
+        <section class="mb-6">
+            <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+            <div class="relative">
+                <input type="text" id="username" name="username" class="input" placeholder="Username">
+                <span class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <i class="fas fa-user text-gray-500"></i>
+                </span>
+            </div>
+        </section>
+        <!-- INPUT EMAIL -->
+        <section class="mb-6">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">E-mail</label>
+            <div class="relative">
+                <input type="email" id="email" name="email" class="input" placeholder="E-mail">
+                <span class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <i class="fas fa-envelope text-gray-500"></i>
+                </span>
+            </div>
+        </section>
+        <!-- INPUT PASSWORD -->
+        <section class="mb-6">
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+            <div class="relative">
+                <input type="password" id="password" name="password" class="input" placeholder="Password">
+                <button type="button" (click)="show_icon = !show_icon" class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    @if (!show_icon) {
+                        <!-- CLOSE -->
+                        <i class="fas fa-lock text-gray-500"></i>
+                    } @else {
+                        <!-- OPEN -->
+                        <i class="fa-solid fa-lock-open text-gray-500"></i>
+                    }
+                </button>
+            </div>
+        </section>
+        <!-- INPUT CONFIRM PASSWORD -->
+        <section class="mb-6">
+            <label for="confirmPassword" class="block text-gray-700 text-sm font-bold mb-2">Confirmar contraseña</label>
+            <div class="relative">
+                <input type="password" id="confirmPassword" name="confirmPassword" class="input" placeholder="Confirmar contraseña">
+                <button type="button" (click)="show_icon_confirm = !show_icon_confirm" class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    @if (!show_icon_confirm) {
+                        <!-- CLOSE -->
+                        <i class="fas fa-lock text-gray-500"></i>
+                    } @else {
+                        <!-- OPEN -->
+                        <i class="fa-solid fa-lock-open text-gray-500"></i>
+                    }
+                </button>
+            </div>
+        </section>
+        <!-- BUTTON SIGN UP -->
+        <button type="submit" class="btn">Sign UP</button>
+    </form>
+</section>

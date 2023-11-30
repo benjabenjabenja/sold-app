@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './features/sidebar/sidebar.component';
-import { MenuItem } from './features/entities/item-menu.types';
+import { MenuItem } from './infrastructure/entities/item-menu.types';
 
 @Component({
 	selector: 'app-root',
 	standalone: true,
 	imports: [CommonModule, RouterOutlet, RouterModule, SidebarComponent],
 	templateUrl: './app.component.html',
-	styles: [],
+	styles: ``,
 })
 export class AppComponent {
 
@@ -36,6 +36,6 @@ export class AppComponent {
 			subItems: []
 		},
 	];
-	
+
 	constructor() { }
 }

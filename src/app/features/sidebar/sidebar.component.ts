@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MenuItem } from '../entities/item-menu.types';
+import { MenuItem } from '../../infrastructure/entities/item-menu.types';
 
 @Component({
 	selector: 'app-sidebar',

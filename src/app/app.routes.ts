@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AuthHomeComponent } from './auth/auth-home/auth-home.component';
+import { AuthHomeComponent } from './auth/auth-home.component';
 
 export const routes: Routes = [
     {
