@@ -1,0 +1,74 @@
+.sidebar {
+    opacity: .8;
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -350px;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.burger-icon,
+.close-icon {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) { 
+    .sidebar {
+        opacity: .8;
+        width: 85%;
+        margin: 0;
+        top: 0;
+        left: -85%;
+        .open {
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 500px) { 
+    .sidebar {
+        opacity: .8;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        left: -100%;
+        .open {
+            left: 0;
+        }
+    }
+}

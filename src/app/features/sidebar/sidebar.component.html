@@ -1,0 +1,40 @@
+<section class="flex h-full">
+    <!-- SIDEBAR -->
+    <div class="sidebar bg-gray-800 text-white h-full fixed top-0 transition-transform duration-300 ease-in-out transform"
+        [class.translate-x-0]="isSidebarOpen" [class.translate-x-full]="!isSidebarOpen">  
+        <!-- MENU CONTENT -->  
+        <ul class="mt-12">
+            @for (item of menuItems; track item.label) {
+            <li class="pb-4 border-b border-gray-600">
+                <a [routerLink]="item.link" class="flex items-center text-md whitespace-nowrap">
+                    <span class="icon mr-4">{{ item.icon }}</span>
+                    {{ item.label }}
+                </a>
+                @if(item.subItems && item.subItems.length){
+                <ul class="pl-4">
+                    @for(subItem of item.subItems; track subItem.label){
+                    <li class="pb-2">
+                        <a [routerLink]="subItem.link" class="flex items-center text-base">
+                            <span class="icon mr-4">{{ subItem.icon }}</span>
+                            {{ subItem.label }}
+                        </a>
+                    </li>
+                    }
+                </ul>
+                }
+            </li>
+            } @empty {
+            Items menu HERE
+            }
+        </ul>
+    </div>  
+    <!-- BUTTON TRIGGER -->
+    <button class="toggle-btn absolute top-5 left-5 cursor-pointer" (click)="toggleSidebar()">
+        @if(isSidebarOpen){
+            <div class="burger-icon text-xl text-black">&#9776;</div>
+        }  
+        @if(!isSidebarOpen){
+            <div class="close-icon text-xl">&times;</div>
+        }
+    </button>
+</section>
